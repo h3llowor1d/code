@@ -187,5 +187,9 @@
 	"site" : "知乎",
 	"link" : "https://www.zhihu.com/rss",
 	"type" : "rss"
+},{
+	"site" : "腾讯",
+	"link" : "http://cdc.tencent.com/feed/",
+	"type" : "rss"
 }
 ]
