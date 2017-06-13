@@ -8,6 +8,7 @@ import (
 type Result struct {
 	Field   string
 	Content string
+	ContentLen int
 }
 
 // Matcher defines the behavior required by types that want
@@ -38,6 +39,6 @@ func Display(results chan *Result) {
 	// The channel blocks until a result is written to the channel.
 	// Once the channel is closed the for loop terminates.
 	for result := range results {
-		log.Printf("%s:\n%s\n\n", result.Field, result.Content)
+		log.Printf("%s:\n%s\nContent Length:%d\n", result.Field, result.Content,result.ContentLen)
 	}
 }

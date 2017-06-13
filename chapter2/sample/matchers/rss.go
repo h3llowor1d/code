@@ -7,8 +7,7 @@ import (
 	"log"
 	"net/http"
 	"regexp"
-
-	"github.com/goinaction/code/chapter2/sample/search"
+	"github.com/code/chapter2/sample/search"
 )
 
 type (
@@ -90,6 +89,7 @@ func (m rssMatcher) Search(feed *search.Feed, searchTerm string) ([]*search.Resu
 			results = append(results, &search.Result{
 				Field:   "Title",
 				Content: channelItem.Title,
+				ContentLen:len(channelItem.Title),
 			})
 		}
 
@@ -104,6 +104,7 @@ func (m rssMatcher) Search(feed *search.Feed, searchTerm string) ([]*search.Resu
 			results = append(results, &search.Result{
 				Field:   "Description",
 				Content: channelItem.Description,
+				ContentLen:len(channelItem.Description),
 			})
 		}
 	}

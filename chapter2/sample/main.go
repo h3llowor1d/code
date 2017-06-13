@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 	"os"
-
-	_ "github.com/goinaction/code/chapter2/sample/matchers"
-	"github.com/goinaction/code/chapter2/sample/search"
+	"github.com/code/chapter2/sample/search"
+	_ "github.com/code/chapter2/sample/matchers"
+	"flag"
 )
 
 // init is called prior to main.
@@ -16,6 +16,10 @@ func init() {
 
 // main is the entry point for the program.
 func main() {
+	var searchStr string
+	flag.StringVar(&searchStr, "search","","搜索关键字")
+	//解析输入的参数
+	flag.Parse()
 	// Perform the search for the specified term.
-	search.Run("president")
+	search.Run(searchStr)
 }

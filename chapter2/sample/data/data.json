@@ -183,5 +183,9 @@
 	"site" : "nbcnews",
 	"link" : "http://rss.msnbc.msn.com/id/28180066/device/rss/rss.xml",
 	"type" : "rss"
+},{
+	"site" : "知乎",
+	"link" : "https://www.zhihu.com/rss",
+	"type" : "rss"
 }
 ]
